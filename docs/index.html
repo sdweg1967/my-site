@@ -34,6 +34,7 @@
             line-height: 1.6;
             color: var(--text);
             background: var(--background);
+            font-size: 16px;
         }
 
         .container {
@@ -126,7 +127,7 @@
             transition: 0.3s;
         }
 
-        /* Герой */
+        /* Герой - УЛУЧШЕННЫЙ */
         .hero {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
@@ -181,6 +182,7 @@
             font-size: clamp(1rem, 2vw, 1.25rem);
             color: rgba(255,255,255,0.9);
             margin-bottom: 3rem;
+            line-height: 1.7;
         }
 
         .highlight {
@@ -301,7 +303,7 @@
             transform: translateY(-1px);
         }
 
-        /* Секция технологий */
+        /* Секция технологий - УЛУЧШЕННАЯ */
         .technologies {
             padding: 100px 0;
             background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
@@ -312,6 +314,7 @@
             font-size: clamp(2.5rem, 4vw, 3rem);
             margin-bottom: 1rem;
             font-weight: 700;
+            color: var(--primary);
         }
 
         .section-subtitle {
@@ -319,6 +322,10 @@
             color: var(--text-light);
             margin-bottom: 4rem;
             font-size: 1.125rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.7;
         }
 
         .tech-grid {
@@ -383,9 +390,10 @@
             color: var(--text);
         }
 
-        /* Секция услуг */
+        /* Секция услуг - УЛУЧШЕННАЯ */
         .services {
             padding: 100px 0;
+            background: white;
         }
 
         .services-grid {
@@ -469,7 +477,7 @@
             margin-bottom: 1.5rem;
         }
 
-        /* Секция кейсов */
+        /* Секция кейсов - УЛУЧШЕННАЯ */
         .cases {
             padding: 100px 0;
             background: var(--surface);
@@ -590,9 +598,10 @@
             border: 1px solid var(--border);
         }
 
-        /* Секция отзывов */
+        /* Секция отзывов - УЛУЧШЕННАЯ */
         .testimonials {
             padding: 100px 0;
+            background: white;
         }
 
         .testimonials-grid {
@@ -677,7 +686,7 @@
             font-size: 0.875rem;
         }
 
-        /* Секция процесса */
+        /* Секция процесса - УЛУЧШЕННАЯ */
         .process {
             padding: 100px 0;
             background: var(--surface);
@@ -762,9 +771,10 @@
             color: var(--text);
         }
 
-        /* Контакты */
+        /* Контакты - УЛУЧШЕННАЯ */
         .contact {
             padding: 100px 0;
+            background: white;
         }
 
         .contact-content {
@@ -849,6 +859,7 @@
         .contact-cta p {
             margin-bottom: 1.5rem;
             color: var(--text-light);
+            line-height: 1.7;
         }
 
         .contact-actions {
@@ -964,6 +975,50 @@
         .tech-category:nth-child(2) { animation-delay: 0.2s; }
         .tech-category:nth-child(3) { animation-delay: 0.3s; }
 
+        /* НОВАЯ СЕКЦИЯ: Преимущества */
+        .benefits {
+            padding: 100px 0;
+            background: var(--surface);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .benefit-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .benefit-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .benefit-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .benefit-card p {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
         /* Адаптивность */
         @media (max-width: 768px) {
             .container {
@@ -1020,7 +1075,8 @@
             
             .services-grid,
             .cases-grid,
-            .testimonials-grid {
+            .testimonials-grid,
+            .benefits-grid {
                 grid-template-columns: 1fr;
             }
             
@@ -1070,6 +1126,10 @@
             .process-timeline:before {
                 display: none;
             }
+            
+            .benefit-card {
+                padding: 1.5rem;
+            }
         }
 
         @media (max-width: 480px) {
@@ -1082,7 +1142,8 @@
             .cases,
             .testimonials,
             .process,
-            .contact {
+            .contact,
+            .benefits {
                 padding: 60px 0;
             }
             
@@ -1109,6 +1170,7 @@
                 <div class="nav-links">
                     <a href="#services">Услуги</a>
                     <a href="#technologies">Технологии</a>
+                    <a href="#benefits">Преимущества</a>
                     <a href="#cases">Кейсы</a>
                     <a href="#testimonials">Отзывы</a>
                     <a href="#process">Процесс</a>
@@ -1247,6 +1309,52 @@
                             <span>Google Analytics</span>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- НОВАЯ СЕКЦИЯ: Преимущества -->
+    <section id="benefits" class="benefits">
+        <div class="container">
+            <h2>Почему выбирают меня</h2>
+            <p class="section-subtitle">Ключевые преимущества, которые отличают меня от конкурентов</p>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">⚡</div>
+                    <h3>Молниеносная скорость</h3>
+                    <p>Сайты загружаются менее чем за 1 секунду благодаря современным технологиям и оптимизации</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">📱</div>
+                    <h3>Адаптивный дизайн</h3>
+                    <p>Идеальное отображение на всех устройствах - от смартфонов до десктопов</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🔍</div>
+                    <h3>SEO-оптимизация</h3>
+                    <p>Встроенная SEO-оптимизация помогает занять высокие позиции в поисковых системах</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🛡️</div>
+                    <h3>Безопасность</h3>
+                    <p>Защита от уязвимостей и регулярное обновление для максимальной безопасности</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🚀</div>
+                    <h3>Современные технологии</h3>
+                    <p>Использую только актуальные фреймворки и библиотеки для долгосрочной поддержки</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">💼</div>
+                    <h3>Бизнес-ориентированность</h3>
+                    <p>Фокусируюсь на результатах, которые приносят реальную пользу вашему бизнесу</p>
                 </div>
             </div>
         </div>
@@ -1416,42 +1524,6 @@
                             <span>⚙️ Админ-панель</span>
                         </div>
                         <a href="https://sdweg1967.github.io/photographer-portfolio/" class="btn btn-demo" target="_blank">🌐 Смотреть демо</a>
-                    </div>
-                </div>
-
-                <div class="case-card">
-                    <div class="case-image" style="background: linear-gradient(135deg, #7c3aed, #6d28d9);">
-                        <div class="case-type">Веб-приложение • React</div>
-                    </div>
-                    <div class="case-content">
-                        <h3>Фитнес-трекер "HealthPro"</h3>
-                        <p>Прогрессивное веб-приложение для отслеживания тренировок и питания</p>
-                        <div class="case-results">
-                            <div class="case-result">
-                                <strong>+50%</strong>
-                                <span>вовлеченность</span>
-                            </div>
-                            <div class="case-result">
-                                <strong>95%</strong>
-                                <span>PWA Score</span>
-                            </div>
-                            <div class="case-result">
-                                <strong>2.5x</strong>
-                                <span>скорость</span>
-                            </div>
-                        </div>
-                        <div class="case-tech">
-                            <span>React</span>
-                            <span>Redux Toolkit</span>
-                            <span>Chart.js</span>
-                            <span>Firebase</span>
-                        </div>
-                        <div class="case-features">
-                            <span>📱 PWA</span>
-                            <span>📊 Графики</span>
-                            <span>🔔 Уведомления</span>
-                        </div>
-                        <a href="#contact" class="btn btn-demo">🎯 Обсудить проект</a>
                     </div>
                 </div>
             </div>
@@ -1678,7 +1750,7 @@
         }, observerOptions);
 
         // Анимируем карточки
-        document.querySelectorAll('.tech-category, .case-card, .testimonial-card, .service-card').forEach(el => {
+        document.querySelectorAll('.tech-category, .case-card, .testimonial-card, .service-card, .benefit-card').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(30px)';
             el.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
